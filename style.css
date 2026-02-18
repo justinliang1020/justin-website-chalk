@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background: black;
   height: 100%;
 }
 
@@ -25,4 +25,67 @@ body {
   height: 4.72%;
   left: 45.88%;
   top: 36.91%;
+}
+
+.arena {
+  width: 22.96%;
+  height: 4.72%;
+  left: 40.88%;
+  top: 41.91%;
+}
+
+.brooklyn {
+  width: 26.96%;
+  height: 4.72%;
+  left: 34.88%;
+  top: 46.91%;
+}
+
+.justin-browser {
+  width: 32.96%;
+  height: 9.72%;
+  left: 39.88%;
+  top: 51.91%;
+}
+
+.youtube {
+  width: 14.96%;
+  height: 4.72%;
+  left: 19.88%;
+  top: 63.91%;
+}
+
+.arena-profile {
+  width: 14.96%;
+  height: 4.72%;
+  left: 39.88%;
+  top: 63.91%;
+}
+
+.linkedin {
+  width: 18.96%;
+  height: 4.72%;
+  left: 57.88%;
+  top: 64.91%;
+}
+
+.twitter {
+  width: 14.96%;
+  height: 4.72%;
+  left: 18.88%;
+  top: 69.91%;
+}
+
+.github {
+  width: 18.96%;
+  height: 4.72%;
+  left: 36.88%;
+  top: 68.91%;
+}
+
+.gir {
+  width: 19.96%;
+  height: 25.72%;
+  left: 63.88%;
+  top: 24.91%;
 }
