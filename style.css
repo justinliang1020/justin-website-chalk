@@ -10,11 +10,13 @@ body {
   margin: 0;
   display: flex;
   flex-direction: row;
+  gap: 50px;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 480px) {
     background: url(noise.svg), rgb(75 108 112);
+    flex-direction: column;
   }
 }
 
@@ -26,6 +28,8 @@ section {
   display: flex;
   flex-direction: column;
   overflow: clip;
+  width: 100%;
+  max-width: 450px;
 
   h1 {
     margin: 0;
@@ -36,6 +40,12 @@ section {
     color: hsl(0 0 90%);
     font-weight: normal;
   }
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 600px;
 }
 
 .hyperimage {
