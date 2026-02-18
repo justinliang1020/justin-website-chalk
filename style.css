@@ -19,3 +19,22 @@ body {
   left: 45.88%;
   top: 32.91%;
 }
+
+.bitbucket {
+  width: 14.96%;
+  height: 4.72%;
+  left: 45.88%;
+  top: 36.91%;
+}
+
+.tooltip {
+  display: none;
+}
+
+section:has(.atlassian:hover) ~ .tooltip--atlassian {
+  display: block;
+}
+
+section:has(.bitbucket:hover) ~ .tooltip--bitbucket {
+  display: block;
+}
