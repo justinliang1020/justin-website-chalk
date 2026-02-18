@@ -18,17 +18,33 @@ body {
   }
 }
 
+section {
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 15px 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+
+  h1 {
+    margin: 0;
+    padding: 2px 5px;
+    background-color: hsl(0 0 0% / 40%);
+    font-size: 1em;
+    text-align: center;
+    color: hsl(0 0 90%);
+    font-weight: normal;
+  }
+}
+
 .hyperimage {
   width: fit-content;
   position: relative;
 
   img {
-    border-radius: 10px;
-    box-sizing: border-box;
-    border: 1px solid black;
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 15px 6px;
-    width: 100%;
     max-width: 450px;
+    display: block;
   }
 
   a {
