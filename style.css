@@ -18,22 +18,39 @@ html {
 }
 
 body {
-  background: url(noise.svg), linear-gradient(rgb(75 108 112), rgb(171 152 51));
+  color: black;
+  background:
+    url(noise.svg), linear-gradient(rgb(125 182 189), rgb(217 199 103));
   margin: 0;
   min-height: 100dvh;
-  padding: 10px 50px;
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+    background:
+      url(noise.svg),
+      linear-gradient(hsl(27.8deg 29.29% 37.45%), hsl(258.67deg 30.36% 24.97%));
+  }
+
+  padding: 10px 2em;
+  @media (min-width: 600px) {
+    padding: 10px 6em;
+  }
 }
 
 a {
-  color: black;
   position: relative;
+
+  color: black;
+  @media (prefers-color-scheme: dark) {
+    color: white;
+  }
 
   &::after {
     content: "↗";
     font-size: 0.4em;
     position: absolute;
     top: -0.3em;
-    right: -0.6em;
+    right: -0.9em;
   }
 
   &:hover {
