@@ -48,9 +48,6 @@ a {
   &::after {
     content: "↗";
     font-size: 0.4em;
-    position: absolute;
-    top: -0.3em;
-    right: -0.9em;
   }
 
   &:hover {
