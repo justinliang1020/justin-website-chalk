@@ -75,5 +75,11 @@ hr {
 
   img {
     border: 2px dashed pink;
+    filter: grayscale(1);
+    padding: 3px;
+  }
+
+  img:hover {
+    filter: none;
   }
 }
