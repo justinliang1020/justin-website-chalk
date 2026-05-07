@@ -68,3 +68,12 @@ iframe {
 hr {
   border: 1px dashed hsl(0 0 15%);
 }
+
+.name {
+  display: flex;
+  gap: 5px;
+
+  img {
+    border: 2px dashed pink;
+  }
+}

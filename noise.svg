@@ -6,6 +6,8 @@
     <filter id="filter0_n_373_116" x="0" y="0" width="237" height="214" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.45" stitchTiles="stitch" numOctaves="5" result="noise" seed="5120"> <!-- edit baseFrequency for noise size-->
+      </feTurbulence>
       <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise"/>
       <feComponentTransfer in="alphaNoise" result="coloredNoise1">
         <feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
