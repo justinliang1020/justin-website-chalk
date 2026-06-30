@@ -53,6 +53,12 @@ body {
     letter-spacing: 0.3em;
     text-transform: lowercase;
   }
+
+  h2 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: lowercase;
+  }
 }
 
 main {
