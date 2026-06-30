@@ -33,13 +33,14 @@ body {
 
 .sidebar {
   position: fixed;
+  padding: 5px;
   top: 0;
   left: 0;
   width: 200px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   border-right: 1px solid #e0e0e0;
 
   @media (prefers-color-scheme: dark) {
@@ -51,12 +52,6 @@ body {
     font-weight: 600;
     letter-spacing: 0.3em;
     text-transform: lowercase;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
   }
 }
 
