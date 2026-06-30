@@ -10,44 +10,45 @@
   <body>
     <nav class="sidebar">
       <h1>justin liang</h1>
-      <a href="#" class="active" data-src="/about">about</a>
+      <a href="#about" data-src="/about">about</a>
       <h2>are.na channels</h2>
       <a
-        href="#"
-        class="active"
+        href="#slowness"
         data-src="https://www.are.na/justin-liang/slowness-in-the-creative-process/embed"
         >slowness</a
       >
       <a
-        href="#"
+        href="#justin-liang"
         data-src="https://www.are.na/justin-liang/justin-liang-969c3qmu7bg/embed"
         >justin liang</a
       >
       <a
-        href="#"
+        href="#uncategorized"
         data-src="https://www.are.na/justin-liang/uncategorized-x90eek6ekqu/embed"
         >uncategorized</a
       >
     </nav>
 
     <main>
-      <iframe
-        src="https://www.are.na/justin-liang/slowness-in-the-creative-process/embed"
-      ></iframe>
+      <iframe src="/about"></iframe>
     </main>
 
     <script>
+      const DEFAULT_PATH = "#about";
+
       const links = document.querySelectorAll(".sidebar a");
       const iframe = document.querySelector("main iframe");
 
-      links.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          links.forEach((l) => l.classList.remove("active"));
-          link.classList.add("active");
-          iframe.src = link.dataset.src;
-        });
-      });
+      function activate(hash) {
+        const target =
+          document.querySelector(`.sidebar a[href="${hash}"]`) || links[0];
+        links.forEach((l) => l.classList.remove("active"));
+        target.classList.add("active");
+        iframe.src = target.dataset.src;
+      }
+
+      window.addEventListener("hashchange", () => activate(location.hash));
+      activate(location.hash || "#about");
     </script>
   </body>
 </html>
