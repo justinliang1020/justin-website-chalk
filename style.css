@@ -107,7 +107,6 @@ a {
 
   &:hover {
     background-color: lightblue;
-    animation: breathe 4s ease-in-out infinite;
   }
 }
 
@@ -126,5 +125,6 @@ a {
 }
 
 blockquote {
+  padding: 1px;
   background-color: hsl(0 0 90%);
 }
