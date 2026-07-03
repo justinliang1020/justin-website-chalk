@@ -18,9 +18,12 @@ const closeMenu = () => {
 
 /** @param {string} identifier */
 const activate = (identifier) => {
-  const target =
-    document.querySelector(`.sidebar a[href="${identifier}"]`) ||
-    sidebarLinks[0];
+  // !identifier handles the empty-string case: pressing back from a hash to root
+  // fires hashchange with location.hash === "", not "/"
+  const isHome = !identifier || identifier === "/";
+  const target = isHome
+    ? document.querySelector('.sidebar a[href="/"]')
+    : document.querySelector(`.sidebar a[href="${identifier}"]`) || sidebarLinks[0];
 
   sidebarLinks.forEach((l) => l.classList.remove("active"));
 
@@ -28,11 +31,15 @@ const activate = (identifier) => {
     target.classList.add("active");
   }
 
-  const isHome = identifier === "/";
   if (isHome) {
     homeContent.style.display = "";
     iframe.style.display = "none";
   } else {
+    // Show iframe synchronously — deferring to the load event causes a race:
+    // if the user navigates home before the iframe finishes loading, the load
+    // callback fires after activate("/") and incorrectly hides home content.
+    homeContent.style.display = "none";
+    iframe.style.display = "";
     //@ts-ignore
     iframe.src = target.dataset.src;
   }
@@ -52,13 +59,6 @@ sidebarLinks.forEach((link) => {
 window.addEventListener("hashchange", () => activate(location.hash));
 window.addEventListener("popstate", () => activate(location.hash || "/"));
 activate(location.hash || "/");
-
-iframe.addEventListener("load", () => {
-  if (iframe.style.display === "none") {
-    iframe.style.display = "";
-    homeContent.style.display = "none";
-  }
-});
 
 hamburger.addEventListener("click", () => {
   const open = sidebar.classList.toggle("open");
