@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{pageTitle}}</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body class="flex-body">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h2>justin liang</h2>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+      </div>
+      <div class="sidebar-body">
+        <a href="/"{{#isHome}} class="active"{{/isHome}}>home</a>
+        <h2>are.na channels</h2>
+        {{#channels}}
+        <a href="/{{slug}}/"{{#isActive}} class="active"{{/isActive}}>{{name}}</a>
+        {{/channels}}
+      </div>
+    </nav>
+    <main>
+      {{> content}}
+    </main>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>
