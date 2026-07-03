@@ -9,39 +9,44 @@
   </head>
   <body>
     <nav class="sidebar">
-      <h2>justin liang</h2>
-      <a href="#home" data-src="/home">justin</a>
-      <h2>are.na channels</h2>
-      <a
-        href="#slowness"
-        data-src="https://www.are.na/justin-liang/slowness-in-the-creative-process/embed"
-        >slowness in the creative process</a
-      >
-      <a
-        href="#justin-liang"
-        data-src="https://www.are.na/justin-liang/justin-liang-969c3qmu7bg/embed"
-        >justin liang</a
-      >
-      <a
-        href="#uncategorized"
-        data-src="https://www.are.na/justin-liang/uncategorized-x90eek6ekqu/embed"
-        >uncategorized</a
-      >
-      <a
-        href="#watermelon"
-        data-src="https://www.are.na/justin-liang/watermelon-sejadxzensc/embed"
-        >watermelon</a
-      >
-      <a
-        href="#quotes"
-        data-src="https://www.are.na/justin-liang/quotes-nlcurs8qjuk/embed"
-        >quotes</a
-      >
-      <a
-        href="#anime-manga"
-        data-src="https://www.are.na/justin-liang/anime-manga-fcrt8ug7dks/embed"
-        >anime manga</a
-      >
+      <div class="sidebar-header">
+        <h2>justin liang</h2>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+      </div>
+      <div class="sidebar-links">
+        <a href="#home" data-src="/home">justin</a>
+        <h2>are.na channels</h2>
+        <a
+          href="#slowness"
+          data-src="https://www.are.na/justin-liang/slowness-in-the-creative-process/embed"
+          >slowness in the creative process</a
+        >
+        <a
+          href="#justin-liang"
+          data-src="https://www.are.na/justin-liang/justin-liang-969c3qmu7bg/embed"
+          >justin liang</a
+        >
+        <a
+          href="#uncategorized"
+          data-src="https://www.are.na/justin-liang/uncategorized-x90eek6ekqu/embed"
+          >uncategorized</a
+        >
+        <a
+          href="#watermelon"
+          data-src="https://www.are.na/justin-liang/watermelon-sejadxzensc/embed"
+          >watermelon</a
+        >
+        <a
+          href="#quotes"
+          data-src="https://www.are.na/justin-liang/quotes-nlcurs8qjuk/embed"
+          >quotes</a
+        >
+        <a
+          href="#anime-manga"
+          data-src="https://www.are.na/justin-liang/anime-manga-fcrt8ug7dks/embed"
+          >anime manga</a
+        >
+      </div>
     </nav>
 
     <main>
@@ -67,6 +72,21 @@
 
       window.addEventListener("hashchange", () => activate(location.hash));
       activate(location.hash || "#about");
+
+      const sidebar = document.querySelector(".sidebar");
+      const hamburger = document.querySelector(".hamburger");
+
+      hamburger.addEventListener("click", () => {
+        const open = sidebar.classList.toggle("open");
+        hamburger.textContent = open ? "✕" : "☰";
+      });
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          sidebar.classList.remove("open");
+          hamburger.textContent = "☰";
+        });
+      });
     </script>
   </body>
 </html>
