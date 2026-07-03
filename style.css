@@ -43,7 +43,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   border-right: 1px solid #e0e0e0;
 
   @media (prefers-color-scheme: dark) {
@@ -60,6 +59,7 @@ body {
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: lowercase;
+    margin-bottom: 0.25em;
   }
 }
 
@@ -72,7 +72,9 @@ body {
 .sidebar-body {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  a {
+    padding: 0.25em 0;
+  }
 
   .active {
     background-color: yellow;
@@ -179,7 +181,8 @@ blockquote {
 }
 
 a:hover,
-.sidebar-body a.hovered {
+.sidebar-body a.hovered,
+#home-content a.hovered {
   background-color: lightblue;
 }
 

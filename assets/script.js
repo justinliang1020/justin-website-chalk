@@ -84,6 +84,14 @@ document.querySelectorAll("#home-content a[href]").forEach((link) => {
   link.addEventListener("mouseleave", () => sidebarLink.classList.remove("hovered"));
 });
 
+sidebarLinks.forEach((sidebarLink) => {
+  const href = sidebarLink.getAttribute("href");
+  const homeLink = document.querySelector(`#home-content a[href="${href}"]`);
+  if (!homeLink) return;
+  sidebarLink.addEventListener("mouseenter", () => homeLink.classList.add("hovered"));
+  sidebarLink.addEventListener("mouseleave", () => homeLink.classList.remove("hovered"));
+});
+
 hamburger.addEventListener("click", () => {
   const open = sidebar.classList.toggle("open");
   hamburger.textContent = open ? "✕" : "☰";
