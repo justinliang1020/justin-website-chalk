@@ -87,59 +87,6 @@
         style="width: 100%; height: 100%; border: none; display: none"
       ></iframe>
     </main>
-
-    <script>
-      const links = document.querySelectorAll(".sidebar a");
-      const iframe = document.querySelector("main iframe");
-      const homeContent = document.getElementById("home-content");
-
-      const sidebar = document.querySelector(".sidebar");
-      const hamburger = document.querySelector(".hamburger");
-
-      function closeMenu() {
-        sidebar.classList.remove("open");
-        hamburger.textContent = "☰";
-      }
-
-      function activate(identifier) {
-        const isHome = !identifier || identifier === "/";
-        const target = isHome
-          ? document.querySelector('.sidebar a[href="/"]')
-          : document.querySelector(`.sidebar a[href="${identifier}"]`) ||
-            links[0];
-
-        links.forEach((l) => l.classList.remove("active"));
-        target.classList.add("active");
-
-        if (isHome) {
-          homeContent.style.display = "";
-          iframe.style.display = "none";
-        } else {
-          homeContent.style.display = "none";
-          iframe.style.display = "";
-          iframe.src = target.dataset.src;
-        }
-      }
-
-      links.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          closeMenu();
-          if (link.getAttribute("href") === "/") {
-            e.preventDefault();
-            history.pushState({}, "", "/");
-            activate("/");
-          }
-        });
-      });
-
-      window.addEventListener("hashchange", () => activate(location.hash));
-      window.addEventListener("popstate", () => activate(location.hash || "/"));
-      activate(location.hash || "/");
-
-      hamburger.addEventListener("click", () => {
-        const open = sidebar.classList.toggle("open");
-        hamburger.textContent = open ? "✕" : "☰";
-      });
-    </script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
