@@ -174,20 +174,6 @@ a {
   }
 }
 
-.sidebar nav a {
-  font-size: 0.9rem;
-  text-decoration: none;
-
-  &::after {
-    content: none;
-  }
-
-  &:hover {
-    background-color: transparent;
-    animation: breathe 1.2s ease-in-out infinite;
-  }
-}
-
 blockquote {
   padding: 1px;
 }
