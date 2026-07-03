@@ -32,8 +32,6 @@ const activate = (identifier) => {
     homeContent.style.display = "";
     iframe.style.display = "none";
   } else {
-    homeContent.style.display = "none";
-    iframe.style.display = "";
     //@ts-ignore
     iframe.src = target.dataset.src;
   }
@@ -53,6 +51,13 @@ links.forEach((link) => {
 window.addEventListener("hashchange", () => activate(location.hash));
 window.addEventListener("popstate", () => activate(location.hash || "/"));
 activate(location.hash || "/");
+
+iframe.addEventListener("load", () => {
+  if (iframe.style.display === "none") {
+    iframe.style.display = "";
+    homeContent.style.display = "none";
+  }
+});
 
 hamburger.addEventListener("click", () => {
   const open = sidebar.classList.toggle("open");
