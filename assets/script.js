@@ -75,6 +75,15 @@ iframe.addEventListener("load", () => {
   }
 });
 
+document.querySelectorAll("#home-content a[href]").forEach((link) => {
+  const sidebarLink = document.querySelector(
+    `.sidebar-body a[href="${link.getAttribute("href")}"]`
+  );
+  if (!sidebarLink) return;
+  link.addEventListener("mouseenter", () => sidebarLink.classList.add("hovered"));
+  link.addEventListener("mouseleave", () => sidebarLink.classList.remove("hovered"));
+});
+
 hamburger.addEventListener("click", () => {
   const open = sidebar.classList.toggle("open");
   hamburger.textContent = open ? "✕" : "☰";

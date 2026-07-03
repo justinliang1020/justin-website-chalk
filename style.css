@@ -172,10 +172,6 @@ a {
   @media (prefers-color-scheme: dark) {
     color: white;
   }
-
-  &:hover {
-    background-color: lightblue;
-  }
 }
 
 .sidebar nav a {
@@ -194,6 +190,11 @@ a {
 
 blockquote {
   padding: 1px;
+}
+
+a:hover,
+.sidebar-body a.hovered {
+  background-color: lightblue;
 }
 
 #home-content {
