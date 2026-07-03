@@ -1,4 +1,4 @@
-const links = document.querySelectorAll(".sidebar a");
+const sidebarLinks = document.querySelectorAll(".sidebar a");
 const iframe = /** @type {HTMLElement} */ (
   document.querySelector("main iframe")
 );
@@ -19,9 +19,10 @@ const closeMenu = () => {
 /** @param {string} identifier */
 const activate = (identifier) => {
   const target =
-    document.querySelector(`.sidebar a[href="${identifier}"]`) || links[0];
+    document.querySelector(`.sidebar a[href="${identifier}"]`) ||
+    sidebarLinks[0];
 
-  links.forEach((l) => l.classList.remove("active"));
+  sidebarLinks.forEach((l) => l.classList.remove("active"));
 
   if (target) {
     target.classList.add("active");
@@ -37,7 +38,7 @@ const activate = (identifier) => {
   }
 };
 
-links.forEach((link) => {
+sidebarLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     closeMenu();
     if (link.getAttribute("href") === "/") {
