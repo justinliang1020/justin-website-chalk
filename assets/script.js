@@ -19,6 +19,7 @@ const closeMenu = () => {
 // Tracks whether we intend to show the iframe. Cleared when navigating home so
 // a late-firing load event doesn't incorrectly replace home content.
 let pendingIframe = false;
+let savedHomeScrollY = 0;
 
 /** @param {string} identifier */
 const activate = (identifier) => {
@@ -40,6 +41,8 @@ const activate = (identifier) => {
     pendingIframe = false;
     homeContent.style.display = "";
     iframe.style.display = "none";
+    // rAF so the element is visible before scrolling
+    requestAnimationFrame(() => window.scrollTo(0, savedHomeScrollY));
   } else {
     // Hide while the new src loads to avoid flashing stale content.
     // The load handler below reveals it once ready.
@@ -69,6 +72,7 @@ activate(location.hash || "/");
 // before the iframe finishes loading — in that case, don't show the iframe.
 iframe.addEventListener("load", () => {
   if (pendingIframe) {
+    savedHomeScrollY = window.scrollY;
     homeContent.style.display = "none";
     iframe.style.display = "";
     pendingIframe = false;
