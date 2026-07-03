@@ -16,6 +16,10 @@ const closeMenu = () => {
   hamburger.textContent = "☰";
 };
 
+// Tracks whether we intend to show the iframe. Cleared when navigating home so
+// a late-firing load event doesn't incorrectly replace home content.
+let pendingIframe = false;
+
 /** @param {string} identifier */
 const activate = (identifier) => {
   // !identifier handles the empty-string case: pressing back from a hash to root
@@ -23,7 +27,8 @@ const activate = (identifier) => {
   const isHome = !identifier || identifier === "/";
   const target = isHome
     ? document.querySelector('.sidebar a[href="/"]')
-    : document.querySelector(`.sidebar a[href="${identifier}"]`) || sidebarLinks[0];
+    : document.querySelector(`.sidebar a[href="${identifier}"]`) ||
+      sidebarLinks[0];
 
   sidebarLinks.forEach((l) => l.classList.remove("active"));
 
@@ -32,14 +37,13 @@ const activate = (identifier) => {
   }
 
   if (isHome) {
+    pendingIframe = false;
     homeContent.style.display = "";
     iframe.style.display = "none";
   } else {
-    // Show iframe synchronously — deferring to the load event causes a race:
-    // if the user navigates home before the iframe finishes loading, the load
-    // callback fires after activate("/") and incorrectly hides home content.
-    homeContent.style.display = "none";
-    iframe.style.display = "";
+    // Hide while the new src loads to avoid flashing stale content.
+    // The load handler below reveals it once ready.
+    pendingIframe = true;
     //@ts-ignore
     iframe.src = target.dataset.src;
   }
@@ -59,6 +63,17 @@ sidebarLinks.forEach((link) => {
 window.addEventListener("hashchange", () => activate(location.hash));
 window.addEventListener("popstate", () => activate(location.hash || "/"));
 activate(location.hash || "/");
+
+// Reveal the iframe once the new src has loaded.
+// Checking homeContent guards the race where the user navigates home
+// before the iframe finishes loading — in that case, don't show the iframe.
+iframe.addEventListener("load", () => {
+  if (pendingIframe) {
+    homeContent.style.display = "none";
+    iframe.style.display = "";
+    pendingIframe = false;
+  }
+});
 
 hamburger.addEventListener("click", () => {
   const open = sidebar.classList.toggle("open");
