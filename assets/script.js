@@ -18,10 +18,8 @@ const closeMenu = () => {
 
 /** @param {string} identifier */
 const activate = (identifier) => {
-  const isHome = !identifier || identifier === "/";
-  const target = isHome
-    ? document.querySelector('.sidebar a[href="/"]')
-    : document.querySelector(`.sidebar a[href="${identifier}"]`) || links[0];
+  const target =
+    document.querySelector(`.sidebar a[href="${identifier}"]`) || links[0];
 
   links.forEach((l) => l.classList.remove("active"));
 
@@ -29,6 +27,7 @@ const activate = (identifier) => {
     target.classList.add("active");
   }
 
+  const isHome = identifier === "/";
   if (isHome) {
     homeContent.style.display = "";
     iframe.style.display = "none";
