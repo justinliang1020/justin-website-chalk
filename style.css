@@ -177,7 +177,16 @@ a {
 }
 
 blockquote {
-  padding: 1px;
+  border-left: 3px solid black;
+  padding: 0.4em 0.75em;
+  margin-left: 0.5em;
+  font-style: italic;
+  color: #555;
+
+  @media (prefers-color-scheme: dark) {
+    border-left-color: #888;
+    color: #aaa;
+  }
 }
 
 a:hover,
