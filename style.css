@@ -69,7 +69,7 @@ body {
   justify-content: space-between;
 }
 
-.sidebar-links {
+.sidebar-body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -116,12 +116,12 @@ main {
     display: block;
   }
 
-  .sidebar-links {
+  .sidebar-body {
     display: none;
     padding-top: 4px;
   }
 
-  .sidebar.open .sidebar-links {
+  .sidebar.open .sidebar-body {
     display: flex;
   }
 
