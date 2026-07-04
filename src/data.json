@@ -1,32 +1,37 @@
 [
   {
-    "name": "slowness in the creative process",
+    "name": "New York City",
+    "slug": "nyc",
+    "embedUrl": "https://www.are.na/justin-liang/new-york-city-nyc/embed"
+  },
+  {
+    "name": "Slowness in the Creative Process",
     "slug": "slowness",
     "embedUrl": "https://www.are.na/justin-liang/slowness-in-the-creative-process/embed"
   },
   {
-    "name": "justin liang",
+    "name": "Justin Liang (life log)",
     "slug": "justin-liang",
     "embedUrl": "https://www.are.na/justin-liang/justin-liang-969c3qmu7bg/embed"
   },
   {
-    "name": "uncategorized",
-    "slug": "uncategorized",
+    "name": "Uncategorized",
+    "slug": "Uncategorized",
     "embedUrl": "https://www.are.na/justin-liang/uncategorized-x90eek6ekqu/embed"
   },
   {
-    "name": "watermelon",
-    "slug": "watermelon",
+    "name": "Watermelon",
+    "slug": "Watermelon",
     "embedUrl": "https://www.are.na/justin-liang/watermelon-sejadxzensc/embed"
   },
   {
-    "name": "quotes",
-    "slug": "quotes",
+    "name": "Quotes",
+    "slug": "Quotes",
     "embedUrl": "https://www.are.na/justin-liang/quotes-nlcurs8qjuk/embed"
   },
   {
-    "name": "anime manga",
-    "slug": "anime-manga",
+    "name": "Anime & Manga",
+    "slug": "Anime-manga",
     "embedUrl": "https://www.are.na/justin-liang/anime-manga-fcrt8ug7dks/embed"
   }
 ]

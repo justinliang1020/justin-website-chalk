@@ -148,11 +148,9 @@ section {
   gap: 1rem;
 
   h2 {
-    font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #888;
   }
 
   p {
