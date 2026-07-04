@@ -207,3 +207,21 @@ a:hover,
   gap: 0.75rem;
   max-width: 600px;
 }
+
+.toc {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 150px;
+  font-size: 0.8rem;
+
+  a {
+    display: block;
+    padding: 0.15em 0;
+  }
+
+  @media (min-width: 1000px) {
+    display: block;
+  }
+}
