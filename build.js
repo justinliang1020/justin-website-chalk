@@ -4,9 +4,12 @@ import Mustache from "mustache";
 
 function build() {
   const channels = JSON.parse(fs.readFileSync("src/data.json", "utf8"));
-  const base = fs.readFileSync("src/templates/base.mustache", "utf8");
+  const base = fs.readFileSync("src/templates/base.mustache.html", "utf8");
   const homeTpl = fs.readFileSync("src/templates/home.mustache.html", "utf8");
-  const channelTpl = fs.readFileSync("src/templates/channel.mustache", "utf8");
+  const channelTpl = fs.readFileSync(
+    "src/templates/channel.mustache.html",
+    "utf8",
+  );
 
   fs.mkdirSync("out", { recursive: true });
 
