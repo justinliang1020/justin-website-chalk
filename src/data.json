@@ -25,6 +25,11 @@
     "embedUrl": "https://www.are.na/justin-liang/texas-mfzic32tfss/embed"
   },
   {
+    "name": "Watermelon",
+    "slug": "watermelon",
+    "embedUrl": "https://www.are.na/justin-liang/watermelon-sejadxzensc/embed"
+  },
+  {
     "name": "Shanghainese",
     "slug": "shanghainese",
     "embedUrl": "https://www.are.na/justin-liang/shanghainese-language/embed"
@@ -38,11 +43,6 @@
     "name": "Uncategorized",
     "slug": "Uncategorized",
     "embedUrl": "https://www.are.na/justin-liang/uncategorized-x90eek6ekqu/embed"
-  },
-  {
-    "name": "Watermelon",
-    "slug": "Watermelon",
-    "embedUrl": "https://www.are.na/justin-liang/watermelon-sejadxzensc/embed"
   },
   {
     "name": "Quotes",
