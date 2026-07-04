@@ -10,7 +10,7 @@ function build() {
 
   fs.mkdirSync("out", { recursive: true });
 
-  for (const asset of ["style.css", "assets", "fonts", "favicon.ico"]) {
+  for (const asset of ["assets", "fonts", "favicon.ico"]) {
     fs.cpSync(asset, path.join("out", asset), { recursive: true });
   }
 
@@ -54,9 +54,9 @@ function build() {
 build();
 
 if (process.argv.includes("--watch")) {
-  console.log("watching src/ for changes…");
+  console.log("watching src/ and assets/ for changes…");
   let debounce;
-  fs.watch("src", { recursive: true }, () => {
+  const rebuild = () => {
     clearTimeout(debounce);
     debounce = setTimeout(() => {
       console.log("rebuilding…");
@@ -66,5 +66,8 @@ if (process.argv.includes("--watch")) {
         console.error(e.message);
       }
     }, 50);
-  });
+  };
+  for (const dir of ["src", "assets"]) {
+    fs.watch(dir, { recursive: true }, rebuild);
+  }
 }

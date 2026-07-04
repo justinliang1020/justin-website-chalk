@@ -78,6 +78,10 @@ body {
 
   .active {
     background-color: yellow;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: darkgoldenrod;
+    }
   }
 }
 
@@ -193,6 +197,9 @@ a:hover,
 .sidebar-body a.hovered,
 #home-content a.hovered {
   background-color: lightblue;
+  @media (prefers-color-scheme: dark) {
+    background-color: blue;
+  }
 }
 
 #home-content {
