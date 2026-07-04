@@ -158,6 +158,10 @@ section {
     font-size: 0.95rem;
     line-height: 1.7;
   }
+
+  li {
+    list-style-type: "- ";
+  }
 }
 
 @keyframes breathe {
