@@ -178,6 +178,13 @@ a {
   }
 }
 
+a.arena::after {
+  content: "✶✶";
+  display: inline-block;
+  font-size: 0.55em;
+  color: grey;
+}
+
 blockquote {
   border-left: 3px solid black;
   padding: 0.4em 0.75em;
