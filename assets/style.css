@@ -154,6 +154,11 @@ section {
     text-transform: uppercase;
   }
 
+  h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
   p {
     font-size: 0.95rem;
     line-height: 1.7;
