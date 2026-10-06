@@ -2,36 +2,21 @@
   {
     "name": "Justin Browser - custom web browsers",
     "link": "/justin-browser/",
-    "imageUrl": "/assets/allaboutlily.webp"
+    "imageUrl": "/assets/justinbrowser.png"
   },
   {
     "name": "wikicollage, collage tool for wikipedia screenshots",
     "link": "https://github.com/justinliang1020/wikicollage",
-    "imageUrl": "/assets/allaboutlily.webp"
-  },
-  {
-    "name": "hyperimage, images with links (DOWN FOR NOW)",
-    "link": "https://hyperimage.site/",
-    "imageUrl": "/assets/allaboutlily.webp"
+    "imageUrl": "/assets/wikicollage.png"
   },
   {
     "name": "stickerboard2, windows xp themed image editor",
     "link": "https://stickerboard2.pages.dev/",
-    "imageUrl": "/assets/allaboutlily.webp"
-  },
-  {
-    "name": "fake wikipedia image caption generator",
-    "link": "https://justinliang1020.github.io/fake-wikipedia/",
-    "imageUrl": "/assets/allaboutlily.webp"
-  },
-  {
-    "name": "stickerboard, a fun image editor",
-    "link": "https://stickerboard.pages.dev/",
-    "imageUrl": "/assets/allaboutlily.webp"
+    "imageUrl": "/assets/stickerboard2.png"
   },
   {
     "name": "airpose, camera-based full body tracking for VR",
     "link": "https://github.com/justinliang1020/AirPose",
-    "imageUrl": "/assets/allaboutlily.webp"
+    "imageUrl": "/assets/airpose.png"
   }
 ]
