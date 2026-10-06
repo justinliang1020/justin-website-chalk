@@ -56,7 +56,12 @@
   },
   {
     "name": "Strangers I've Interacted With",
-    "slug": "strangers-i-ve-interacted-with",
+    "slug": "strangers",
     "embedUrl": "https://www.are.na/justin-liang/strangers-i-ve-interacted-with/embed"
+  },
+  {
+    "name": "Sayaka Murata",
+    "slug": "sayaka-murata",
+    "embedUrl": "https://www.are.na/justin-liang/sayaka-murata/embed"
   }
 ]
