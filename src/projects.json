@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Justin Browser - custom web browsers",
+    "link": "/justin-browser/"
+  },
+  {
+    "name": "wikicollage, collage tool for wikipedia screenshots",
+    "link": "https://github.com/justinliang1020/wikicollage"
+  },
+  {
+    "name": "hyperimage, images with links (DOWN FOR NOW)",
+    "link": "https://hyperimage.site/"
+  },
+  {
+    "name": "stickerboard2, windows xp themed image editor",
+    "link": "https://stickerboard2.pages.dev/"
+  },
+  {
+    "name": "fake wikipedia image caption generator",
+    "link": "https://justinliang1020.github.io/fake-wikipedia/"
+  },
+  {
+    "name": "stickerboard, a fun image editor",
+    "link": "https://stickerboard.pages.dev/"
+  },
+  {
+    "name": "airpose, camera-based full body tracking for VR",
+    "link": "https://github.com/justinliang1020/AirPose"
+  }
+]

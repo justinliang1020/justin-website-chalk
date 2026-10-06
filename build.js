@@ -3,7 +3,10 @@ import path from "path";
 import Mustache from "mustache";
 
 function build() {
-  const channels = JSON.parse(fs.readFileSync("src/data.json", "utf8"));
+  const channels = JSON.parse(
+    fs.readFileSync("src/arenaChannels.json", "utf8"),
+  );
+  const projects = JSON.parse(fs.readFileSync("src/projects.json", "utf8"));
   const base = fs.readFileSync("src/templates/base.mustache.html", "utf8");
   const homeTpl = fs.readFileSync("src/templates/home.mustache.html", "utf8");
   const channelTpl = fs.readFileSync(
@@ -38,7 +41,12 @@ function build() {
     "out/projects/index.html",
     Mustache.render(
       base,
-      { pageTitle: "Projects — Justin Liang", isProjects: true, channels },
+      {
+        pageTitle: "Projects — Justin Liang",
+        isProjects: true,
+        channels,
+        projects,
+      },
       { content: projectsTpl },
     ),
   );

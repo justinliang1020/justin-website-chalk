@@ -2,40 +2,11 @@
   <h2>Projects</h2>
   <p>Here are some various projects I've made:</p>
   <ul>
+    {{#projects}}
     <li>
-      <a href="/justin-browser/" class="arena"
-        >Justin Browser - custom web browsers</a
-      >
+      {{#imageUrl}}<img src="{{imageUrl}}" alt="" width="300px" />{{/imageUrl}}
+      <a href="{{link}}">{{name}}</a>
     </li>
-    <li>
-      <a href="https://github.com/justinliang1020/wikicollage"
-        >wikicollage, collage tool for wikipedia screenshots</a
-      >
-    </li>
-    <li>
-      <a href="https://hyperimage.site/"
-        >hyperimage, images with links (DOWN FOR NOW)</a
-      >
-    </li>
-    <li>
-      <a href="https://stickerboard2.pages.dev/"
-        >stickerboard2, windows xp themed image editor</a
-      >
-    </li>
-    <li>
-      <a href="https://justinliang1020.github.io/fake-wikipedia/"
-        >fake wikipedia image caption generator</a
-      >
-    </li>
-    <li>
-      <a href="https://stickerboard.pages.dev/"
-        >stickerboard, a fun image editor</a
-      >
-    </li>
-    <li>
-      <a href="https://github.com/justinliang1020/AirPose"
-        >airpose, camera-based full body tracking for VR</a
-      >
-    </li>
+    {{/projects}}
   </ul>
 </section>
