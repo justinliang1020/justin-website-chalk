@@ -238,6 +238,10 @@ a:hover,
     padding: 0.15em 0;
   }
 
+  .toc-sub {
+    padding-left: 1em;
+  }
+
   @media (min-width: 1000px) {
     display: block;
   }
