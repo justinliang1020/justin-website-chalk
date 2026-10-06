@@ -1,12 +1,11 @@
 <section id="home-content">
   <h2>Projects</h2>
-  <p>Here are some various projects I've made:</p>
-  <ul>
+  <div class="project-grid">
     {{#projects}}
-    <li>
-      {{#imageUrl}}<img src="{{imageUrl}}" alt="" width="300px" />{{/imageUrl}}
-      <a href="{{link}}">{{name}}</a>
-    </li>
+    <a class="project-card" href="{{link}}">
+      <img src="{{imageUrl}}" alt="" />
+      <span>{{name}}</span>
+    </a>
     {{/projects}}
-  </ul>
+  </div>
 </section>
