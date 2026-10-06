@@ -1,21 +1,25 @@
 [
   {
-    "name": "Justin Browser - custom web browsers",
+    "name": "Justin Browser",
+    "description": "custom web browsers",
     "link": "/justin-browser/",
     "imageUrl": "/assets/justinbrowser.png"
   },
   {
-    "name": "wikicollage, collage tool for wikipedia screenshots",
+    "name": "wikicollage",
+    "description": "collage tool for wikipedia screenshots",
     "link": "https://github.com/justinliang1020/wikicollage",
     "imageUrl": "/assets/wikicollage.png"
   },
   {
-    "name": "stickerboard2, windows xp themed image editor",
+    "name": "stickerboard2",
+    "description": "windows xp themed image editor",
     "link": "https://stickerboard2.pages.dev/",
     "imageUrl": "/assets/stickerboard2.png"
   },
   {
-    "name": "airpose, camera-based full body tracking for VR",
+    "name": "airpose",
+    "description": "camera-based full body tracking for VR",
     "link": "https://github.com/justinliang1020/AirPose",
     "imageUrl": "/assets/airpose.png"
   }

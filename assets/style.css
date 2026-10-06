@@ -245,11 +245,12 @@ a:hover,
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1rem;
 }
 
 .project-card {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -258,5 +259,14 @@ a:hover,
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+    color: #555;
+
+    @media (prefers-color-scheme: dark) {
+      color: #aaa;
+    }
   }
 }
