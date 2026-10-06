@@ -10,6 +10,10 @@ function build() {
     "src/templates/channel.mustache.html",
     "utf8",
   );
+  const projectsTpl = fs.readFileSync(
+    "src/templates/projects.mustache.html",
+    "utf8",
+  );
 
   fs.mkdirSync("out", { recursive: true });
 
@@ -27,6 +31,18 @@ function build() {
     ),
   );
   console.log("wrote out/index.html");
+
+  // Projects page
+  fs.mkdirSync("out/projects", { recursive: true });
+  fs.writeFileSync(
+    "out/projects/index.html",
+    Mustache.render(
+      base,
+      { pageTitle: "Projects — Justin Liang", isProjects: true, channels },
+      { content: projectsTpl },
+    ),
+  );
+  console.log("wrote out/projects/index.html");
 
   // Channel pages
   for (const channel of channels) {

@@ -15,6 +15,7 @@
       </div>
       <div class="sidebar-body">
         <a href="/"{{#isHome}} class="active"{{/isHome}}>home</a>
+        <a href="/projects/"{{#isProjects}} class="active"{{/isProjects}}>projects</a>
         <h2>are.na channels ✶✶</h2>
         {{#channels}}
         <a href="/{{slug}}/"{{#isActive}} class="active"{{/isActive}}>{{name}}</a>
